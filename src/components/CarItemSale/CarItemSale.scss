@@ -1,0 +1,91 @@
+@import "../../dist/styles/vars.scss";
+.сarItemSale {
+    background-color: $cMain;
+    z-index: 1;
+    @media screen and (max-width: $breakpoint480) {
+        &::after,
+        &::before {
+            width: 280px;
+        }
+        width: 280px;
+        padding: 10px 5px;
+    }
+    &:hover &__info-text {
+        color: $cMain;
+    }
+    &:hover &__price {
+        color: $cMain;
+    }
+    &:hover svg path {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+    }
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__info-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    &:hover &__image-dispersal {
+        opacity: 0;
+    }
+    &__info-image {
+        width: 20px;
+        height: 20px;
+    }
+    &:hover &__info-dispersal::after {
+        content: "";
+        background: url("../../dist/image/icons/CarItem/dispersal.svg");
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+        width: 20px;
+        height: 20px;
+        top: -5px;
+        left: -25px;
+    }
+    &__info-text {
+        width: 60px;
+        color: $black;
+        position: relative;
+        font-size: 12px;
+        @media screen and (max-width: $breakpoint480) {
+            width: 50px;
+        }
+    }
+    &__buttons {
+    }
+    &__btn-photo {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        background: $cMain;
+        color: $black;
+        padding: 10px 18px;
+        font-size: 17px;
+        height: 42px;
+        &:hover {
+            color: $cMain;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 14px;
+        }
+    }
+    &__btn-reserv {
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 14px;
+        }
+    }
+    &__btn-reserv:hover {
+        background: $cMain;
+        color: $black;
+    }
+    &__price {
+        color: $black;
+        margin: 15px 0;
+    }
+}

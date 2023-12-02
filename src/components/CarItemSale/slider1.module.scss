@@ -1,0 +1,75 @@
+@import "../../dist/styles/vars.scss";
+
+.sliderWrap > div > div > div > div > div {
+    width: 100%;
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint768) {
+        width: 90%;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        width: 100%;
+    }
+}
+.sliderWrap > div {
+    display: flex !important;
+    flex-direction: column !important;
+    @media screen and (max-width: $breakpoint992) {
+        top: 0px;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        top: 2px;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        top: 10%;
+    }
+}
+.sliderWrap {
+    @media screen and (max-width: $breakpoint768) {
+        position: relative;
+        top: 0%;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        position: relative;
+        top: 30%;
+    }
+}
+.sliderImage {
+    width: 40%;
+    height: 100%;
+    @media screen and (max-width: $breakpoint1450) {
+        width: 70%;
+    }
+    @media screen and (max-width: $breakpoint992) {
+        width: 85%;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        width: 100%;
+    }
+}
+
+.sliderSmallImage {
+    width: 100px;
+}
+
+.sliderWrap > div > ul > li {
+    margin: 0 50px;
+}
+.sliderWrap > div > ul {
+    position: static !important;
+    width: 94%;
+    margin-top: 20px;
+    @media screen and (max-width: $breakpoint992) {
+        width: 90%;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        display: none !important;
+    }
+}
+.slick-track {
+    position: static !important;
+}
+.sliderWrap > div > div {
+    width: 100%;
+    left: 0;
+}

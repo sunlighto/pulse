@@ -1,0 +1,107 @@
+@import "../../dist/styles/vars.scss";
+.tarrifs {
+    margin: 80px 0;
+    @media screen and (max-width: $breakpoint768) {
+        margin: 50px 0;
+    }
+    &__wrap {
+        margin-top: 90px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 38px;
+    }
+
+    &__text {
+        width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 100px;
+        @media screen and (max-width: $breakpoint768) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        gap: 30px;
+        @media screen and (max-width: $breakpoint768) {
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+    }
+
+    &__wraning {
+        width: 600px;
+    }
+
+    &__warning-title {
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+
+    &__warning-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__warning-item {
+        width: 100%;
+    }
+    &__warning-item ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__warning-item li {
+        list-style: inside;
+        width: 90%;
+        font-size: 15px;
+    }
+    &__item-title {
+        margin-bottom: 10px;
+    }
+    &__question {
+        max-width: 400px;
+        padding: 20px;
+        background: $dark-blue;
+        border-radius: 20px;
+        border: 1px solid $cMain;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media screen and (max-width: $breakpoint768) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__question-title {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    &__question-items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        font-size: 16px;
+    }
+    &__question-text {
+        text-align: center;
+        font-size: 20px;
+    }
+    &__question-link {
+        text-align: center;
+        color: $blue;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+}

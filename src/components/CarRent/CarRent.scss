@@ -1,0 +1,179 @@
+@import "../../dist/styles/vars.scss";
+.carRent {
+    &__wrapper {
+        margin: 40px 0;
+        margin-top: 90px;
+    }
+
+    &__title {
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        text-align: center;
+        max-width: 80%;
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        @media screen and (max-width: $breakpoint768) {
+            text-align: start;
+        }
+    }
+
+    &__cart {
+        background: $dark-blue;
+        padding: 30px 50px;
+        border-radius: 20px;
+        @media screen and (max-width: $breakpoint480) {
+            padding: 20px 5px;
+            width: 100%;
+        }
+    }
+
+    &__cart-title {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-between;
+        @media screen and (max-width: $breakpoint768) {
+            justify-content: center;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        width: 300px;
+        height: 230px;
+        align-items: center;
+
+        background: $blue;
+        border-radius: 22px;
+        border: 2px solid $cMain;
+        position: relative;
+        transition: 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            background: $dark-blue;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__item-title {
+        font-size: 24px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        font-family: $fontS;
+        margin-top: 10px;
+    }
+
+    &__item-image {
+        text-align: center;
+        align-items: center;
+        @media screen and (max-width: $breakpoint480) {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    &__item-image img {
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+        }
+    }
+
+    &__item-price {
+        position: absolute;
+        background: $cMain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $black;
+        width: 150px;
+        height: 40px;
+        bottom: 0px;
+        right: 0px;
+        font-size: 16px;
+        border-radius: 18px 0 18px 0;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        @media screen and (max-width: $breakpoint480) {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+    }
+
+    &__phoneNumber {
+        font-size: 34px;
+        font-family: $fontM;
+        transition: 0.5s ease;
+        &:hover {
+            color: $blue;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 2rem;
+        }
+    }
+
+    &__info {
+        margin-top: 50px;
+    }
+
+    &__info-item {
+    }
+
+    &__info-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    &__info-subtitle {
+        width: 80%;
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+        }
+    }
+
+    &__info-text {
+        width: 80%;
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+        }
+    }
+    &__btn {
+        padding: 8px 20px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+.carRent__ordered-list li {
+    list-style-type: decimal;
+}
+ol,
+ul {
+    margin: 10px 0 5px 40px;
+    line-height: 170%;
+}
+.carRent__unOrdered-list li {
+    list-style-type: initial;
+}

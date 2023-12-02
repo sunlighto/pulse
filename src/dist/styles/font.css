@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Acme';
+    src: url('../fonts/Acme/Acme-Regular.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Medium.ttf') format('ttf');
+    src: url('../fonts/Roboto/Roboto-Black.ttf') format('ttf');
+    src: url('../fonts/Roboto/Roboto-Bold.ttf') format('ttf');
+    src: url('../fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+  }

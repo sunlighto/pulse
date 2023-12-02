@@ -1,0 +1,66 @@
+@import "../../dist/styles/vars.scss";
+.conditions {
+    &__wrap {
+        margin: 100px 0;
+    }
+
+    &__title {
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__items {
+        background: $dark-blue;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        @media screen and (max-width: $breakpoint768) {
+            padding: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 40px;
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
+    }
+
+    &__name {
+        width: 600px;
+        font-family: $fontS;
+        font-size: 16px;
+        @media screen and (max-width: $breakpoint768) {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        font-family: $fontS;
+        font-size: 16px;
+        line-height: 150%;
+        &-item {
+            margin-bottom: 8px;
+        }
+        &-item:last-child {
+            margin-bottom: 0;
+        }
+        &-text {
+            margin-bottom: 20px;
+        }
+        &-text:first-of-type {
+            margin-top: 20px;
+        }
+        &-text:last-child {
+            margin-bottom: 0;
+        }
+        &-decor {
+            display: inline;
+            text-decoration: underline;
+        }
+    }
+}

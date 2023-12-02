@@ -1,0 +1,175 @@
+@import "../../dist/styles/vars.scss";
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media screen and (max-width: $breakpoint768) {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-around;
+    }
+    &__wrap {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.contacts {
+    @media screen and (max-width: $breakpoint480) {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__info-title {
+        color: $gray;
+        font-family: Acme;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__info-tel {
+        color: $gray;
+        font-family: Acme;
+        font-size: 18px;
+        transition: 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            color: $cMain;
+        }
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 16px;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 18px;
+        }
+    }
+
+    &__soc {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        @media screen and (max-width: $breakpoint480) {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 0;
+        }
+    }
+    &__soc img {
+        width: 50px;
+        cursor: pointer;
+        @media screen and (max-width: $breakpoint768) {
+            width: 40px;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            width: 45px;
+        }
+    }
+}
+.footer__logo {
+    margin-bottom: 55px;
+    color: $gray;
+    font-family: Acme;
+    font-size: 40px;
+    font-weight: 400;
+    @media screen and (max-width: $breakpoint480) {
+        margin-bottom: 0;
+    }
+}
+.footer__logo svg {
+    cursor: pointer;
+}
+.footer__logo:hover path {
+    transition: 0.5s ease;
+    color: $cMain;
+    fill: $cMain;
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 450px;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint992) {
+        gap: 5px;
+        justify-content: space-around;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        max-width: 54%;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        gap: 30px;
+        max-width: 100%;
+    }
+    &__item {
+        color: $gray;
+        font-family: Acme;
+        font-size: 18px;
+        transition: 0.5s ease;
+        cursor: pointer;
+        width: 45%;
+        &:hover {
+            color: $cMain;
+        }
+        @media screen and (max-width: $breakpoint992) {
+            max-width: 35%;
+            font-size: 16px;
+        }
+    }
+}
+.soc {
+    max-width: 100%;
+    @media screen and (max-width: $breakpoint768) {
+        width: 100%;
+    }
+    &__title {
+        color: $gray;
+        font-family: Acme;
+        font-size: 18px;
+        margin-bottom: 30px;
+        @media screen and (max-width: $breakpoint768) {
+            text-align: center;
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media screen and (max-width: $breakpoint768) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+    }
+    &__icons svg {
+        @media screen and (max-width: $breakpoint992) {
+            width: 40px;
+        }
+    }
+}
+.soc svg {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+.soc svg:hover path {
+    stroke: $cMain;
+    fill: $cMain;
+}
+.confidencial {
+    text-align: center;
+    color: $gray;
+    font-family: Acme;
+    font-size: 16px;
+    margin: 30px;
+    @media screen and (max-width: $breakpoint480) {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../dist/styles/vars.scss";
+.header {
+    &__logIn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 225px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &__logIn-form {
+    }
+
+    &__logIn-title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__logIn-item {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__logIn-form-text {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    &__logIn-input {
+        padding: 10px 30px;
+        border-radius: 10px;
+        border: none;
+        color: $black;
+    }
+
+    &__auth-logIn {
+        padding: 10px 30px !important;
+        font-size: 18px !important;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}

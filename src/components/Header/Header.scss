@@ -1,0 +1,339 @@
+@import "../../dist/styles/vars.scss";
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    z-index: 100;
+    &__wrap {
+        background: $black;
+        justify-content: center;
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 110;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 30px;
+        z-index: 31;
+        margin: 0;
+        @media screen and (max-width: $breakpoint768) {
+            position: absolute;
+            background: $black;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            &.active {
+                display: flex;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100vw;
+                flex-direction: column;
+                pointer-events: all;
+                justify-content: center;
+                align-items: center;
+                z-index: 22;
+                animation: fade 0.1s linear;
+            }
+        }
+    }
+
+    &__item {
+        font-family: Acme;
+        font-size: 18px;
+        font-weight: 400;
+        align-items: center;
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        transition: 0.5s ease;
+        &:hover {
+            color: $blue;
+        }
+        &-link {
+            cursor: pointer;
+            z-index: 3;
+            position: relative;
+            transition: 0.5s ease;
+            &:hover {
+                color: $blue;
+            }
+            &:hover .header__item-arrow {
+                stroke: $blue;
+                color: $blue;
+                fill: $blue;
+                transition: all 1s ease;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 0.7px;
+                background-color: $blue;
+            }
+            &:hover:before {
+                width: 100%;
+            }
+            &::before {
+                transition: width 0.4s;
+            }
+        }
+        &:hover .header__item-arrow {
+            stroke: $blue;
+            color: $blue;
+            fill: $blue;
+            transition: all 1s ease;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 0.7px;
+            background-color: $blue;
+        }
+        &:hover:before {
+            width: 100%;
+        }
+        &::before {
+            transition: width 0.4s;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 16px;
+        }
+    }
+
+    &__item-arrow {
+        width: 15px;
+        height: 8px;
+
+        margin-left: 5px;
+        transition: fill 0.5s ease;
+    }
+    &__auth {
+        order: 2;
+        z-index: 100;
+        &-title {
+            font-family: Acme;
+            font-size: 18px;
+            font-weight: 400;
+
+            position: relative;
+            border: none;
+            background: inherit;
+            cursor: pointer;
+            transition: 0.5s ease;
+            &:hover {
+                color: $blue;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 0;
+                height: 0.7px;
+                background-color: $blue;
+            }
+            &:hover:before {
+                width: 100%;
+            }
+            &::before {
+                transition: width 0.4s;
+            }
+            @media screen and (max-width: $breakpoint480) {
+                font-size: 17px;
+            }
+        }
+    }
+    &__modal-content {
+        background-color: $dark-blue !important;
+        backdrop-filter: blur(30px);
+        border-radius: 10px !important;
+        position: relative;
+        border: none !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        height: 70%;
+        overflow: auto;
+        background: white;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        padding: 30px 20px;
+        @media screen and (max-width: $breakpoint768) {
+            max-width: 90%;
+            height: 80%;
+        }
+    }
+    &__modal-close {
+        top: 25px !important;
+    }
+    &__choise {
+        border: none;
+        background: none;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+
+        transition: 0.5s ease;
+        &:hover {
+            color: $blue;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 0.7px;
+            background-color: #fff;
+        }
+        &:hover:before {
+            width: 100%;
+        }
+        &::before {
+            transition: width 0.4s;
+        }
+    }
+}
+.burger {
+    order: 3;
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width: $breakpoint768) {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        z-index: 102;
+        cursor: pointer;
+
+        &.burger-active {
+            &:before {
+                background: $cMain;
+                transform: rotate(45deg);
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+                top: 8px;
+            }
+
+            &:after {
+                background: $cMain;
+                transform: rotate(-45deg);
+                bottom: 10px;
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+            }
+
+            & span {
+                transform: scale(0);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $cMain;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            position: absolute;
+            top: 9px;
+            right: 0;
+            width: 100%;
+            background: $cMain;
+            height: 2px;
+            transform: scale(1);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+    }
+}
+
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    &:hover &__text {
+        color: $cMain;
+        fill: $cMain;
+        transition: fill 1s ease;
+    }
+
+    &:hover &__line {
+        stroke: $blue;
+        fill: none;
+        transition: fill 1s ease;
+    }
+}
+.header__dropDown {
+    position: relative;
+
+    @media screen and (max-width: $breakpoint768) {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        &::before {
+            position: static;
+        }
+    }
+}
+.header__dropDown-wrap {
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 230px;
+    border-radius: 15px;
+    padding: 13px 22px;
+    position: absolute;
+    border: 1px solid $cMain;
+    top: 28px;
+    left: -60px;
+    z-index: 2;
+    cursor: auto;
+    transition: 0.5s ease;
+    &:hover {
+        border: 1px solid $blue;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        position: relative;
+        top: 10px;
+        left: 0;
+    }
+}
+.arrowUp {
+    transform: rotate(180deg);
+}
+a {
+    z-index: 100;
+}

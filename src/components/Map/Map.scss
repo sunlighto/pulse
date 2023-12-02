@@ -1,0 +1,16 @@
+@import "../../dist/styles/vars.scss";
+.map {
+    border-radius: 20px;
+    &__marker {
+        padding: 5px;
+    }
+
+    &__marker-title {
+        color: $black;
+        margin-bottom: 10px;
+    }
+
+    &__marker-text {
+        color: $black;
+    }
+}

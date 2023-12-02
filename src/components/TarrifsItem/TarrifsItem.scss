@@ -1,0 +1,104 @@
+@import "../../dist/styles/vars.scss";
+.tarrifsItem {
+    &__title {
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__content {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: $breakpoint768) {
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 0;
+        }
+    }
+
+    &__item {
+        background: $dark-blue;
+        width: 32%;
+        padding: 30px 20px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        transition: transform 0.5s ease-in-out;
+        border: 1px solid $dark-blue;
+        @media screen and (max-width: $breakpoint768) {
+            width: 100%;
+        }
+        &:hover {
+            transform: translateY(-40px);
+            border: 1px solid $cMain;
+            @media screen and (max-width: $breakpoint768) {
+                transform: translateY(0);
+                border: none;
+            }
+        }
+    }
+    &__content-title {
+        font-size: 24px;
+        text-align: center;
+    }
+    &__price {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 16px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__info-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-btn {
+        margin: 0 auto;
+        padding: 10px 20px;
+        text-align: center;
+        width: 80%;
+        align-self: flex-end;
+        @media screen and (max-width: $breakpoint992) {
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+}
+
+.slider__img {
+    width: 140% !important;
+    height: 300px;
+    transition: 1s ease;
+    @media screen and (max-width: $breakpoint768) {
+        width: 100% !important;
+        height: 220px;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        width: 70% !important;
+    }
+}
+.slick-list:first-child {
+    left: -30px;
+    @media screen and (max-width: $breakpoint768) {
+        left: 20px;
+    }
+    @media screen and (max-width: $breakpoint480) {
+        left: 25px;
+    }
+}

@@ -1,0 +1,24 @@
+@import "../../dist/styles/vars.scss";
+.questions {
+    &__wrap {
+        margin: 100px 0;
+        @media screen and (max-width: $breakpoint768) {
+            margin: 80px 0;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 20px;
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 28px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

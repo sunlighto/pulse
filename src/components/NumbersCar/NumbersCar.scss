@@ -1,0 +1,44 @@
+@import "../../dist/styles/vars.scss";
+.numbersCar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    @media screen and (max-width: $breakpoint768) {
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        @media screen and (max-width: $breakpoint768) {
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        &-img {
+            @media screen and (max-width: $breakpoint768) {
+                width: 250px;
+            }
+            @media screen and (max-width: $breakpoint480) {
+                width: 100%;
+            }
+        }
+        &-text {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        max-width: 600px;
+        @media screen and (max-width: $breakpoint992) {
+            font-size: 18px;
+            max-width: 420px;
+        }
+        @media screen and (max-width: $breakpoint768) {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+}

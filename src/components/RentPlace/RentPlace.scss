@@ -1,0 +1,50 @@
+@import "../../dist/styles/vars.scss";
+.rent {
+    &__place-form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        @media screen and (max-width: $breakpoint768) {
+            flex-direction: column;
+        }
+    }
+
+    &__place-item {
+        width: 45%;
+        @media screen and (max-width: $breakpoint768) {
+            width: 100%;
+        }
+    }
+
+    &__place-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        @media screen and (max-width: $breakpoint768) {
+            text-align: center;
+        }
+    }
+
+    &__place-wrap {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__place-input {
+    }
+    &__place-img {
+        width: 60px;
+        height: 60px;
+        fill: #fff;
+        transition: fill 0.5s;
+        cursor: pointer;
+        &:hover {
+            fill: $dark-blue;
+            stroke: #fff;
+        }
+    }
+    &__place-period {
+    }
+}

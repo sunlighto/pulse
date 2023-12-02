@@ -1,0 +1,124 @@
+@import "../../dist/styles/vars.scss";
+.carSale {
+    &__wrap {
+        background-image: url("../../dist/image/CarForSale.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+        background-position: top;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding-top: 180px;
+        top: -100px;
+        z-index: 1;
+    }
+
+    &__firstScreen {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 30px;
+        margin-bottom: 10%;
+    }
+
+    &__firstScreen-title {
+        font-size: 45px;
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+            font-size: 32px;
+        }
+    }
+
+    &__firstScreen-text {
+        font-size: 32px;
+        width: 70%;
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+            font-size: 24px;
+            line-height: 150%;
+        }
+    }
+
+    &__firstScreen-btn {
+        padding: 20px 30px;
+        width: 300px;
+        text-align: center;
+        @media screen and (max-width: $breakpoint480) {
+            padding: 10px 20px;
+            width: 100%;
+        }
+    }
+
+    &__info {
+    }
+
+    &__info-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    &__info-text {
+        font-size: 20px;
+        margin-bottom: 20px;
+        @media screen and (max-width: $breakpoint480) {
+            font-size: 18px;
+        }
+    }
+
+    &__subCost {
+        margin-top: 60px;
+    }
+    &__subCost-title {
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        @media screen and (max-width: $breakpoint992) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        @media screen and (max-width: $breakpoint992) {
+            width: 30%;
+        }
+        @media screen and (max-width: $breakpoint480) {
+            width: 100%;
+        }
+    }
+
+    &__item-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light-blue;
+        border-radius: 20px;
+        width: 130px;
+        height: 130px;
+        transition: 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            background-color: $dark-blue;
+            border: 1px solid $cMain;
+        }
+    }
+
+    &__item-img img {
+        width: 80px;
+    }
+
+    &__item-title {
+        margin-top: 30px;
+        font-size: 16px;
+        text-align: center;
+    }
+}

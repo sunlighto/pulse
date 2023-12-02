@@ -1,0 +1,86 @@
+@import "./vars.scss";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    list-style: none;
+    font-family: $fontM;
+    font-weight: 400;
+    text-decoration: none;
+}
+html {
+    background-color: $black;
+}
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1450) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+//buttons
+.btn {
+    padding: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: $blue;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.btn:hover {
+    background: #000e8f33;
+    border: 1px solid $cMain;
+}
+.secondBtn {
+    padding: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #000e8f33;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    border: 1px solid $cMain;
+    transition: 0.5s ease;
+}
+.secondBtn:hover {
+    background: $blue;
+    border: 1px solid $blue;
+}
+.input {
+    color: $black;
+    background-color: $input-color;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    resize: none;
+}
+.input:focus,
+.input:active {
+    border: none;
+}
+.input option {
+    color: $black;
+    padding: 10px;
+    border: none;
+}

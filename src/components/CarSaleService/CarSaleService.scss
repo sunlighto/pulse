@@ -1,0 +1,51 @@
+@import "../../dist/styles/vars.scss";
+.carSaleService {
+    &__wrap {
+        margin: 50px 0;
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__image {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__info {
+        background: $dark-blue;
+        padding: 20px;
+        width: 70%;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+
+    &__info-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__info-text {
+        font-size: 14px;
+    }
+}
