@@ -15,7 +15,7 @@ import RentPage from "./pages/RentPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <Layout> <Home></Home> </Layout>,
     children: [
       {
         path: "pulse/home",
