@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pulse/static/css/main.b5b785bd.css",
-    "main.js": "/pulse/static/js/main.4bf0a801.js",
+    "main.js": "/pulse/static/js/main.6a1dc931.js",
     "static/media/icon.svg": "/pulse/static/media/icon.bfe25c213421fafe3501bd30d3167677.svg",
     "static/media/CarForSale.png": "/pulse/static/media/CarForSale.8d29b5031a7481f9b368.png",
     "static/media/light.png": "/pulse/static/media/light.f190e29a5f21cd840097.png",
@@ -42,10 +42,10 @@
     "static/media/engine.svg": "/pulse/static/media/engine.3ac23e394662ab74b8d9a2a69d017304.svg",
     "static/media/checkY.svg": "/pulse/static/media/checkY.f397c29b571146d616d9df690c37b0ca.svg",
     "main.b5b785bd.css.map": "/pulse/static/css/main.b5b785bd.css.map",
-    "main.4bf0a801.js.map": "/pulse/static/js/main.4bf0a801.js.map"
+    "main.6a1dc931.js.map": "/pulse/static/js/main.6a1dc931.js.map"
   },
   "entrypoints": [
     "static/css/main.b5b785bd.css",
-    "static/js/main.4bf0a801.js"
+    "static/js/main.6a1dc931.js"
   ]
 }
