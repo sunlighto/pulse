@@ -27,7 +27,6 @@ export default function RentPlace({ onPeriodChange }) {
   };
 
   useEffect(() => {
-    // Calculate the period whenever dates (startDate or endDate) change
     if (startDate && endDate) {
       const startDateTime = new Date(`${startDate}T${startTime || '00:00'}`);
       const endDateTime = new Date(`${endDate}T${endTime || '00:00'}`);
@@ -36,21 +35,16 @@ export default function RentPlace({ onPeriodChange }) {
       const days = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diffInMilliseconds % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diffInMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
-
       let newPeriod = '';
-
       if (days > 0) {
         newPeriod += `${days} ${getNounEnding(days, 'день', 'дні', 'днів')} `;
       }
-
       if (hours > 0) {
         newPeriod += `${hours} ${getNounEnding(hours, 'година', 'години', 'годин')} `;
       }
-
       if (minutes > 0) {
         newPeriod += `${minutes} ${getNounEnding(minutes, 'хвилина', 'хвилини', 'хвилин')}`;
       }
-
       setPeriod(newPeriod.trim());
       onPeriodChange(newPeriod);
     } else {
