@@ -22,6 +22,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "pulse",
+        element: <Home />,
+      },
+      {
         path: "tarrifs",
         element: <TarrifsPage />,
       },
